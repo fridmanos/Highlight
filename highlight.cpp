@@ -1,4 +1,4 @@
-/* Highlights reserved programming keywords*/
+/* Highlights reserved keywords*/
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -14,7 +14,7 @@ bool is_keyword(std::string&);
 int main(int argc, char *argv[])
 {	
 	if (argc < 2) {
-		std::cout << "Usage: ./" << __FILE__ << " <file>\n";
+		std::cout << "Usage: ./highlight <file>\n";
 		exit(EXIT_FAILURE);
 	}
 	std::ifstream file(argv[1]);
