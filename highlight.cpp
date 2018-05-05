@@ -14,7 +14,7 @@ bool is_keyword(std::string&);
 int main(int argc, char *argv[])
 {	
 	if (argc < 2) {
-		std::cout << "Usage: ./" << argv[0] << " <file>\n";
+		std::cout << "Usage: " << argv[0] << " <file>\n";
 		exit(EXIT_FAILURE);
 	}
 	std::ifstream file(argv[1]);
