@@ -1,2 +1,3 @@
 # Highlight
-Highlights reserved keywords
+<hr>
+A simple program that highlights reserved keywords.
