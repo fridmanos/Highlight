@@ -3,10 +3,12 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <string.h>
 
 /* Color codes */
-#define COLOR_GREEN "\e[1;32m"
-#define COLOR_RESET "\x1b[0m"
+#define COLOR_GREEN "\033[1;32m"
+#define COLOR_RESET "\033[0m"
+#define COLOR_RED "\033[31m"
 /* *********** */
 
 bool is_keyword(std::string&);
@@ -26,11 +28,13 @@ int main(int argc, char *argv[])
 	std::string word; char c;
 	while (file.get(c)) 
 	{
-		if (isalpha(c))
+		if (isalpha(c) || c=='#')
 			word += c;
 		else {
 			if (is_keyword(word))
 				std::cout << COLOR_GREEN << word << COLOR_RESET;
+			else if (strcmp(word.c_str(),"#define")==0 || strcmp(word.c_str(),"#include")==0)
+				std::cout << COLOR_RED << word << COLOR_RESET;
 			else
 				std::cout << word;
 			std::cout << c;
