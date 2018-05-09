@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string.h>
 
-/* Color codes */
+/* ANSI Color codes */
 #define COLOR_GREEN "\033[1;32m"
 #define COLOR_RESET "\033[0m"
 #define COLOR_RED "\033[31m"
