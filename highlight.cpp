@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		else {
 			if (is_keyword(word))
 				std::cout << COLOR_GREEN << word << COLOR_RESET;
-			else if (strcmp(word.c_str(),"#define")==0 || strcmp(word.c_str(),"#include")==0)
+			else if (word == "#define" || word == "#include")
 				std::cout << COLOR_RED << word << COLOR_RESET;
 			else
 				std::cout << word;
